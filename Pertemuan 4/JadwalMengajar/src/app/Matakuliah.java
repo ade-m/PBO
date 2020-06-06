@@ -24,4 +24,12 @@ public class Matakuliah {
         this.nmmatkul = nmmatkul;
     }
 
+    @Override
+    public String toString() {
+        return "" +
+            "\t Kode Matakuliah = '" + getKdmatkul() + "\n" +
+            "\t Nama Matakuliah ='" + getNmmatkul() + "" +
+            "";
+    }
+
 }
