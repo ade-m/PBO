@@ -2,7 +2,11 @@ package app;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * @author budiono
+ * tgl buat 
+ * 
+ */
 public class App {
     public static Scanner inputan = new Scanner(System.in);    
     public static ArrayList <Dosen> datadosen = new ArrayList<Dosen>();
@@ -76,10 +80,10 @@ public class App {
         }
         return false;
     }
-    /*
+    /** 
     * Fungsi untuk cek kode matakuliah tersedia atau tidak
     *
-    */
+    **/
     public static boolean cekDataMatakuliah(String kodeMatakuliah){
         for(int i =0;i<dataMataKuliah.size();i++){
             if(dataMataKuliah.get(i).getKdmatkul().equals(kodeMatakuliah)){
@@ -120,14 +124,18 @@ public class App {
     */
     public static Dosen inputDataDosen(){
         String kddosen,nama,alamat,tgllahir;
+       
+        inputan = new Scanner(System.in); 
         System.out.print("Input Kode Dosen :");
         kddosen=inputan.nextLine();
         System.out.print("Input Kode Nama :");
         nama=inputan.nextLine();
+        inputan.nextLine(); //jeda 1 enter => baris baru
         System.out.print("Input Kode Alamat :");
         alamat=inputan.nextLine();
         System.out.print("Input Kode Tgl Lahir :");
         tgllahir=inputan.nextLine();
+        inputan.close();
         return new Dosen(kddosen, nama, alamat, tgllahir);
     }
 
@@ -192,11 +200,14 @@ public class App {
     *
     */
     public static Matakuliah inputDataMatakuliah(){
+        
+        inputan = new Scanner(System.in); 
         String kdmatkul,nmmatkul;
         System.out.print("Input Kode Matakuliah :");
         kdmatkul=inputan.nextLine();
         System.out.print("Input Nama Matakuliah:");
         nmmatkul=inputan.nextLine();
+        inputan.close();
         return new Matakuliah(kdmatkul,nmmatkul);
     }
 
