@@ -1,17 +1,13 @@
 package app.object;
 
-public class Enemy {
+abstract class Enemy {
     private String name;
-    private int hp,attackPoin;
-    public Enemy(){
-        hp=100;
-    }
-    public void attack(){
-        System.out.println("menyerang player");
-    }
-    public void cekHP(){
-        System.out.println("HP :"+getHp());
-    }
+    private int hp=10,attackPoin;
+
+    abstract void move();
+    abstract void attack();
+    abstract void cekHP();
+  
 
     public String getName() {
         return this.name;
